@@ -1,0 +1,23 @@
+nuevo = "si"
+while nuevo == "si":
+    print("Calculadora de IMC conforme a la norma estandar Méxicana")
+    sabe = input("¿Sabes que es el IMC?" + " ")
+    if sabe == "no":
+        print("El Índice de Masa Corporal (IMC) es una medida estándar en México que relaciona el peso y la estatura para evaluar si un adulto (mayor de 20 años) tiene un peso saludable, sobrepeso u obesidad")
+        sabe = input ("¿Quieres continuar?")
+    if sabe == "si":
+        print("OK continuemos")
+        Peso = input("Ingresa tu peso en Kg" + " ")
+        Altura = input("Ingresa tu altura en m")
+        print("Gracias")
+        IMC = float(Peso) / (float(Altura) * float(Altura))
+        print("Tu indice de masa corporal es" + " " + str(IMC))
+    if IMC <= 18.49:
+        print("Peso Bajo, deberias ir con un especialista")
+    if IMC >= 18.9 and IMC <= 24.9:
+        print("¡Felicidades! Estas en tu peso Ideal")
+    if IMC >= 25 and IMC <= 29.9:
+        print("Tienes sobre peso acude con un especialista")
+    if IMC >= 30:
+        print("Obesidad, deberias ir con un especialista")
+    nuevo = input("¿Quieres hacer un nuevo calculo?")
